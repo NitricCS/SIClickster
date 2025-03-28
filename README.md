@@ -7,7 +7,8 @@ Extension is disabled by default.
 You can enable it in-game at any point by clicking on its icon in the toolbar of your browser.\
 The badge should switch from OFF to ON.
 
-After that, the _Answer_ button in SIGame will automatically be clicked as soon as the game allows you to answer.
+After that, the extension will automatically click the _Answer_ button in SIGame as soon as the game allows you to answer.\
+After it clicked once, the extension will __automatically disable__.
 
 ### Dev Installation
 You can install SIClickster from the source.\
