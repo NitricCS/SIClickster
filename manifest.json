@@ -1,0 +1,24 @@
+{
+    "name": "SIClickster",
+    "description": "Automatically smash the SIGame button when the countdown starts",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+      "default_icon": {
+        "16": "icons/clickster16.png",
+        "32": "icons/clickster32.png",
+        "48": "icons/clickster48.png",
+        "128": "icons/clickster128.png"
+    }
+    },
+    "icons": {
+      "16": "icons/clickster16.png",
+      "32": "icons/clickster32.png",
+      "48": "icons/clickster48.png",
+      "128": "icons/clickster128.png"
+  },
+    "background": {
+      "service_worker": "scripts/background.js"
+    },
+    "permissions": ["activeTab", "scripting"]
+}
