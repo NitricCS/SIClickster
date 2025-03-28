@@ -1,20 +1,30 @@
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/NitricCS/SIClickster/blob/main/README.en.md)
+
 ## SICLickster
-SIClickster is an extension that automatically clicks _Answer_ when you're playing SIGame.
+Браузерное расширение, которое автоматически нажимает кнопку _Ответ_ в SIGame.
 
-### Usage
-Extension is disabled by default.
+### Использование
+SIClickster отключён по умолчанию.
 
-You can enable it in-game at any point by clicking on its icon in the toolbar of your browser.\
-The badge should switch from OFF to ON.
+Вы можете в любой момент активировать его, нажав на иконку расширения в браузере.\
+Индикатор на иконке переключится в состояние ON.
 
-After that, the extension will automatically click the _Answer_ button in SIGame as soon as the game allows you to answer.\
-After it clicked once, the extension will __automatically disable__.
+В активированном состоянии расширение автоматически нажмёт на кнопку _Ответ_, когда это будет возможно.\
+Будьте внимательны в играх без фальстартов: в этом случае кнопка нажмётся сразу же, когда вопрос появится на экране.\
+Активируйте расширение только тогда, когда видите текст вопроса и хотите выиграть кнопку.
 
-### Dev Installation
-You can install SIClickster from the source.\
-To do that, clone this repo and load an unpacked extension from Chrome:
-1. Go to the Extensions page by entering `chrome://extensions` in a new tab.\
-Alternatively, click the Extensions menu puzzle button and select Manage Extensions at the bottom of the menu.\
-Or, click the Chrome menu, hover over More Tools, then select Extensions.
-2. Enable Developer Mode by clicking the toggle switch next to _Developer mode_.
-3. Click the _Load unpacked button_ and select the directory where you cloned this repo.
+После одного нажатия расширение __автоматически отключается__.
+
+Если вы передумали отвечать, расширение можно деактивировать в любой момент до нажатия кнопки _Ответ_. Для этого просто нажмите на иконку ещё раз.
+
+### Установка
+#### Из релизов
+1. Скачайте ZIP-архив последнего релиза из раздела Releases на Github.
+2. Откройте управление расширениями в Chrome (нажмите на иконку с паззлом и выберите _Управление расширениями_).
+3. Перетащите скачанный ZIP в окошко расширений.
+
+#### From Source
+Клонируйте этот репозиторий (или просто скачайте) и загрузите его в Chrome:
+1. Откройте управление расширениями в Chrome (нажмите на иконку с паззлом и выберите _Управление расширениями_).
+2. Включите режим разработчика (тоггл в правом верхнем углу).
+3. Нажмите _Загрузить распакованное расширение_ и выберите папку, в которую клонировали этот репозиторий.
