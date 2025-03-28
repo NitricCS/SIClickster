@@ -13,7 +13,7 @@ When activated, the extension will automatically click the _Answer_ button in SI
 Be careful in games without false starts: the extension will click _Answer_ as soon as the question is selected.\
 Only activate the extension when you see the question and want to win the button.
 
-After clicking once, the extension will __automatically disable__.
+After clicking once, the extension will __automatically disable__. You need to activate it for every question you want to answer.
 
 If you change your mind, you can switch the extension off at any point before it clicks _Answer_ for you. Just click the icon again to do so.
 
