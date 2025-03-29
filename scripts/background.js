@@ -4,7 +4,7 @@ const disabledColor = '#C97412';
 
 chrome.runtime.onInstalled.addListener(() => {
     chrome.action.setBadgeText({
-      text: "OFF",
+      text: 'OFF',
     });
     chrome.action.setBadgeBackgroundColor(
         {color: disabledColor},
@@ -32,18 +32,18 @@ chrome.action.onClicked.addListener(async (tab) => {
                 {color: enabledColor},
                 () => { /* ... */ },
             );
-        } else if (nextState === "OFF") {
+        } else if (nextState === 'OFF') {
             chrome.action.setBadgeBackgroundColor(
                 {color: disabledColor},
                 () => { /* ... */ },
             );
             chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-                chrome.tabs.sendMessage(tab.id, { action: "clickerDisabled" });
+                chrome.tabs.sendMessage(tab.id, { action: 'clickerDisabled' });
             });
         }
 
         chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-            if (message.action === "answerClickPerformed") {
+            if (message.action === 'answerClickPerformed' || message.action === 'noQuestionFound') {
                 chrome.action.setBadgeText({
                     tabId: tab.id,
                     text: 'OFF',
