@@ -6,8 +6,8 @@ A browser extension that automatically clicks _Answer_ when playing SIGame.
 ### Usage
 1. Wait for a question to appear on the screen.
 2. If you want to answer, click the extension icon to enable it.
-3. The extension will automatically click _Answer_ when the game allows it.
-* If you change your mind, you can disable the extension before it triggers the button click.
+3. The extension will automatically click _Answer_ when the game allows it.\
+If you change your mind, you can disable the extension before it triggers the button click.
 4. When playing __without false starts__, the extension will click _Answer_ if another player clicks the button and gives a wrong answer.
 5. The extension will switch off after clicking _Answer_ once or when the question is over. You need to enable it again for the following questions.
 
