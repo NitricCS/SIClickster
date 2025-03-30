@@ -2,53 +2,59 @@ const sigame = 'https://sigame.vladimirkhil.com/';
 const enabledColor = '#0F1AAB';
 const disabledColor = '#C97412';
 
-chrome.runtime.onInstalled.addListener(() => {
-    chrome.action.setBadgeText({
+if (navigator.userAgent.includes("Chrome")) {
+    bs = chrome;
+  } else if (navigator.userAgent.includes("Mozilla")) {
+    bs = browser;
+  };
+
+bs.runtime.onInstalled.addListener(() => {
+    bs.action.setBadgeText({
       text: 'OFF',
     });
-    chrome.action.setBadgeBackgroundColor(
+    bs.action.setBadgeBackgroundColor(
         {color: disabledColor},
         () => { /* ... */ },
       );
   });
 
-chrome.action.onClicked.addListener(async (tab) => {
+bs.action.onClicked.addListener(async (tab) => {
     if (tab.url.startsWith(sigame)) {
-        const prevState = await chrome.action.getBadgeText({ tabId: tab.id });
+        const prevState = await bs.action.getBadgeText({ tabId: tab.id });
         const nextState = prevState === 'ON' ? 'OFF' : 'ON';
 
-        await chrome.action.setBadgeText({
+        await bs.action.setBadgeText({
             tabId: tab.id,
             text: nextState,
         });
 
         if (nextState === 'ON') {
-            chrome.scripting.executeScript({
+            bs.scripting.executeScript({
                 target: { tabId: tab.id },
                 files: ['scripts/content.js'],
             });
 
-            chrome.action.setBadgeBackgroundColor(
+            bs.action.setBadgeBackgroundColor(
                 {color: enabledColor},
                 () => { /* ... */ },
             );
         } else if (nextState === 'OFF') {
-            chrome.action.setBadgeBackgroundColor(
+            bs.action.setBadgeBackgroundColor(
                 {color: disabledColor},
                 () => { /* ... */ },
             );
-            chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-                chrome.tabs.sendMessage(tab.id, { action: 'clickerDisabled' });
+            bs.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+                bs.tabs.sendMessage(tab.id, { action: 'clickerDisabled' });
             });
         }
 
-        chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+        bs.runtime.onMessage.addListener((message, sender, sendResponse) => {
             if (message.action === 'answerClickPerformed' || message.action === 'noQuestionFound') {
-                chrome.action.setBadgeText({
+                bs.action.setBadgeText({
                     tabId: tab.id,
                     text: 'OFF',
                 });
-                chrome.action.setBadgeBackgroundColor(
+                bs.action.setBadgeBackgroundColor(
                     {color: disabledColor},
                     () => { /* ... */ },
                   );

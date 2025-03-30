@@ -4,28 +4,25 @@
 A browser extension that automatically clicks _Answer_ when playing SIGame.
 
 ### Usage
-SIClickster is disabled by default. You can enable it in-game at any point by clicking on its icon in your browser's toolbar.\
-The badge on the extension icon should switch from OFF to ON.\
-The extension can only be activated from a tab with SIGame open.
+1. Wait for a question to appear on the screen.
+2. Click the extension icon to enable it.
+3. The extension will automatically click _Answer_ when the game allows it.
+4. If you change your mind, disable the extension before it triggers the button click.
+5. When playing without false starts, the extension will click _Answer_ if another player clicks the button and gives a wrong answer.
+6. The extension will switch off after clicking _Answer_ once or when the question is over. You need to enable it again for the following questions.
 
-When activated, the extension will automatically click the _Answer_ button in SIGame as soon as it becomes possible.\
-Be careful in games without false starts: the extension will click _Answer_ as soon as the question is selected.\
-Only activate the extension when you see the question and want to win the button.
+You can only enable the extension when SIGame is open and there's a question on the screen.
 
-You __can activate__ the extension __when the question is already being played__, _e.g._, when another player is answering. In this case, SIClickster will automatically click _Answer_ if that player answers wrong.
-
-After clicking once, the extension will __automatically disable__. You need to activate it for every question you want to answer.
-
-If you activated SIClickster but changed your mind, you can still switch it off before it clicks _Answer_ for you. Just click the icon again to do so.
+You __can activate the extension at any point__,  including when another player is answering. In this case, SIClickster will automatically click _Answer_ if that player answers wrong. If they answer correctly, the extension will switch off.
 
 ### Installation
-#### From Releases
-1. Download the ZIP of the latest release from the Releases section here on Github.
+#### Chrome & Co.
+1. Download the ZIP of the latest Chrome release from the Releases section here on Github.
 2. Go to Chrome, open the Extensions page (click the Extensions menu puzzle button and select _Manage Extensions_).
 3. Drag and drop the downloaded ZIP into the page. The extension will be installed.
 
-#### From Source
-Clone this repo and load an unpacked extension from Chrome:
-1. Go to the Extensions page (click the Extensions menu puzzle button and select _Manage Extensions_).
-2. Enable Developer Mode by clicking the toggle switch next to _Developer mode_.
-3. Click the _Load unpacked button_ and select the directory where you cloned this repo.
+#### Firefox
+1. Download the ZIP of the latest Firefox release from the Releases section here on Github.
+2. Open the Add-ons Manager in Firefox (click the puzzle button). Go to the _Extensions_ section.
+3. Click the gear icon at the top right corner and select _Debug Add-ons_.
+4. Click _Load Temporary Add-on..._ and select the downloaded ZIP.
