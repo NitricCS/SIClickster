@@ -23,6 +23,6 @@ You __can activate the extension at any point__,  including when another player 
 
 #### Firefox
 1. Download the ZIP of the latest Firefox release from the Releases section here on Github.
-2. Open the Add-ons Manager in Firefox (click the puzzle button). Go to the _Extensions_ section.
+2. Open the Add-ons Manager in Firefox (click the puzzle button).
 3. Click the gear icon at the top right corner and select _Debug Add-ons_.
 4. Click _Load Temporary Add-on..._ and select the downloaded ZIP.
